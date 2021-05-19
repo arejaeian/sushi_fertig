@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+
+.flexed {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content:center;
+	/*flex-direction: row-reverse;*/
+	/*flex-wrap: wrap-reverse;*/
+}
+
+.flexed > div {
+  max-width: 50%;
+  height: 100%;
+  flex: 1 100%;
+  padding: 10px;
+}
+
+.flexitem ul, .flexitem ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+
+.flexitem img {
+    width: 90%;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.77);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.77);
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.77);
+}
+
+.rezeptname {
+    flex: 1 100%;
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 15pt;
+    color: #03e9f4;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.8);
+}
+
+h1 {
+    color: #03e9f4;
+}
+
+.nichtauswaehlbar{
+    /* verhindert das der text makiebar ist */
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #03e9f4;
+    cursor: pointer;
+}
+
+.pzahl {
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+.hr_abstand {
+    margin: 10px 0px;
+    color: white;
+    border: 1px solid;
+}
+
+.rezept {
+    width: 100%;
+    background: #03e9f4;
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(62,172,255,0.77);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(62,172,255,0.77);
+    box-shadow: 0px 0px 8px 4px rgba(62,172,255,0.77);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.menge {
+    display: inline-block;
+    min-width: 40px;
+    vertical-align: top;
+}
+
+.einheit {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 50px;
+    margin-left: 5px;
+}
+
+.zutat {
+    display: inline-block;
+    height: auto;
+    width: calc(95% - 80px);
+    min-width: 260px;
+    word-wrap: break-word;
+}
+
+/* Zeilenumbruch erzwingen */
+.zutat:after {
+    content: '\A';
+    white-space: pre;
+}
+
+.druck {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.druck img {
+    position: relative;
+    left: 90%;
+    width: 30px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+
+@media all and (max-width: 667px) {
+    .flexed {
+        flex-flow: column wrap;
+    }
+
+    .flexed > div {
+        max-width: 100%;
+    }
+
+    .rezeptname {
+        width: 100%;
+    }
+
+}
+
+@media print {
+
+    header, #hmenue, .druck, #sart {
+        display: none;
+    }
+
+    .flexitem img {
+        width: 20%;
+    }
+
+    .flexed {
+        flex-flow: column wrap;
+    }
+
+    .flexed > div {
+        max-width: 100%;
+    }
+
+    .rezeptname {
+        width: 100%;
+    }
+
+    .rezept {
+        box-shadow: none;
+    }
+
+    @page {
+        size: A4 landscape;
+        align-content: center;
+        page-break-after: always;
+    }
+
+
+}

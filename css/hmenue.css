@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {font-family: '../fonts/kaushan_scriptregular';src: url('../fonts/kaushanscript-regular-webfont.woff2') format('woff2'),
+url('kaushanscript-regular-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+
+* {font-family:"../fonts/kaushan_scriptregular";}
+
+.stik {
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	top: 0px;
+	z-index: 1000;
+}
+
+#hmenue{
+	min-height: 40px;
+	width: 100%;
+	background-color: #03e9f4;
+	padding: 5px 0px 5px;
+}
+
+nav {
+	width: 97%;
+	height: 40px;
+	position: relative;
+	left: 10px;
+}
+
+nav ul {
+	position: absolute;
+	list-style-type: none;
+
+}
+
+nav ul li {
+	float: left;
+	margin-right: 10px;
+    width: auto;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,.5);
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+nav ul ~ li:last-child {
+    margin-right: 0px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	display: block;
+	height: 40px;
+	padding: 13px 20px;
+	background-color: #03e9f4;
+	color: white;
+	white-space: nowrap;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #03e9f4;
+	background-size:1px 60px;
+    -moz-transition: background .2s linear;
+	-webkit-transition: background .2s linear;
+    transition: all .2s linear;
+}
+
+nav ul li ul > li {
+	float: none;
+    box-shadow: none;
+}
+
+/* Untermenüs */
+nav ul li > ul {
+	display: none;
+}
+
+/*Untermenü Grundeinstellung*/
+nav ul li ul li > a {
+	position: relative;
+	top: -1px;
+	min-width: 100px;
+    border-radius: 0px;
+    background: #03e9f4;
+}
+
+/*Hauptmenüleiste bei over*/
+nav ul li:hover > a {
+    background-size:1px 40px;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+/*Over bei Untermenues*/
+nav ul ul li:hover > a {
+	background-color: #7FFFD4;
+	min-width: 100px;
+	height: 40px;
+}
+
+input#responsive-nav, label.responsive-nav-label {
+  display: none;
+}
+
+@media all and (max-width: 727px ) {
+
+    .stik{
+        position: relative;
+    }
+
+    nav label.responsive-nav-label {
+      position: relative;
+      display: block;
+      padding: 5px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    nav label.responsive-nav-label span {
+      margin-right: 20px;
+    }
+
+    nav {
+      left: 0px;
+      width: 100%;
+    }
+
+    nav ul {
+      position: absolute;
+      top: -9999px;
+      margin: 0px;
+      width: 100%;
+    }
+
+    input#responsive-nav[type=checkbox]:checked ~ ul {
+      position: relative;
+      top: 0;
+    }
+
+    nav ul li {
+      float: none;
+    }
+
+    nav ul ul {
+      position: relative;
+      width: 100%;
+      top: 1px;
+    }
+
+    nav ul ul li {
+      width: 100%;
+    }
+
+    nav ul li > a {
+      text-align: center;
+      border-radius: 0px;
+      width: 100%;
+    }
+
+    nav ul li ul li a {
+      text-align: left;
+    }
+
+}

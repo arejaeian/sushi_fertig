@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+h1 {
+  color: black;
+}
+.links {
+  float: left;
+  width: 300px;
+  padding: 20px;
+  color: rgba(11, 175, 209, 1.00);
+}
+.breite {
+  display: inline-block;
+  width: 200px;
+  padding: 5px 0px;
+}
+.rechts {
+  display: inline-block;
+  margin-left: 20px;
+  padding-top: 20px;
+  /* background: rgba(244,201,94,1.00); */
+}
+.rechts input[type="text"] {
+  width: 200px;
+}
+.fehler {
+  color: red;
+}
+.erfolg {
+  color: green;
+}
+
+.rahmen {
+    border: 1px solid silver;
+    padding: 5px;
+}
+
+#formular {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.6);
+    padding: 10px;
+}
+
+#formular label {
+    display: inline-block;
+    width: 80px;
+}
+
+#formular input[type="submit"]{
+    width: 80px;
+    height: 30px;
+}
+
+#formularrez {
+    
+}
+
+#formularrez input[type="text"]{
+    width: 200px;
+}
+
+#formularrez label {
+    display: inline-block;
+    width: 100px;
+}
+
+#formularrez .breite_klein {
+    width: 30px;
+}
+
+#formularrez .abstand {
+    display: inline-block;
+    margin: 0px 35px 5px 0px;
+}

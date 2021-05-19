@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav {
+	width: 100%;
+	height: 60px;
+	position: relative;
+    background: rgba(163,8,8,1.00);
+    z-index: 1000;
+}
+
+nav ul {
+	position: absolute;
+	list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li {
+	float: left;
+	margin-right: 10px;
+    width: auto;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,.5);
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+nav ul ~ li:last-child {
+    margin-right: 0px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	display: block;
+	height: 20px;
+	padding: 11px 20px;
+	background-color: #FF0105;
+	color: white;
+	white-space: nowrap;
+    border-radius: 10px 10px 0px 0px;
+    background: -moz-linear-gradient(to bottom, #f00 0%,#700 50%,#000 100%);
+	background: -webkit-linear-gradient(to bottom, #f00 0%,#700 50%,#000 100%);
+    background: linear-gradient(to bottom, #f00 0%,#700 50%,#000 100%);
+	background-size:1px 40px;
+    -moz-transition: background .2s linear;
+	-webkit-transition: background .2s linear;
+    transition: all .2s linear;
+}
+
+nav ul li ul > li {
+	float: none;
+    box-shadow: none;
+}
+
+/* Untermenüs */
+nav ul li > ul {
+	display: none;
+}
+
+/*Untermenü Grundeinstellung*/
+nav ul li ul li > a {
+	position: relative;
+	top: -1px;
+	min-width: 100px;
+    border-radius: 0px;
+    background: #5C0001;
+}
+
+/*Hauptmenüleiste bei over*/ 
+nav ul li:hover > a {
+    background-size:1px 60px;
+}
+
+nav ul li:hover > ul {
+	display: inline-block;
+    transform: translateX(-40px);
+}
+
+/*Over bei Untermenues*/
+nav ul ul li:hover > a {
+	background-color: #FF0004;
+	min-width: 100px;
+	height: 30px;
+
+}
+
+
+
